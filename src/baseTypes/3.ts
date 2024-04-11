@@ -1,8 +1,12 @@
 let some:unknown;
 some = 'Text';
 let str: string;
-str = <string>some;
-str = typeof some; 
-str = some as string; 
+
+if (typeof some === 'string') {
+    str = <string>some;
+    str = some as string; 
+    str = typeof some; 
+
+}
 
 export {};
